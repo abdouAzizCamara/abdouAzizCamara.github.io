@@ -88,7 +88,7 @@ const Hero = () => {
                 icon={<FiDownload />}
                 position="right"
               />
-            </a>
+            </a>u
           </div>
         </div>
       </div>
