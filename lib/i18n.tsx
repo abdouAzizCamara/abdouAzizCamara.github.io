@@ -30,11 +30,9 @@ function getValue(obj: any, path: string) {
 export function I18nProvider({ children }: { children: React.ReactNode }) {
   const [lang, setLangState] = useState(() => {
     if (typeof window !== "undefined") {
-      return (
-        localStorage.getItem("siteLang") ||
-        document.documentElement.lang ||
-        "fr"
-      );
+      // Priorité: localStorage > langue par défaut (fr)
+      const savedLang = localStorage.getItem("siteLang");
+      return savedLang || "fr";
     }
     return "fr";
   });

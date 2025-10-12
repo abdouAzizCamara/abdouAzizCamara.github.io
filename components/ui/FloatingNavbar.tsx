@@ -117,7 +117,7 @@ export const FloatingNav = ({
           <span className="hidden sm:inline">
             {lang === "en" ? "EN" : "FR"}
           </span>
-          <span className="sm:hidden">Lang</span>
+          <span className="sm:hidden">En/Fr</span>
         </button>
         {/* remove this login btn */}
         {/* <button className="border text-sm font-medium relative border-neutral-200 dark:border-white/[0.2] text-black dark:text-white px-4 py-2 rounded-full">
