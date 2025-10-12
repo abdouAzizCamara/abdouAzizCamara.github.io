@@ -6,8 +6,8 @@ import {
   useScroll,
   useMotionValueEvent,
 } from "framer-motion";
-import Link from "next/link";
 import { cn } from "@/lib/utils";
+import { useTranslation } from "@/lib/i18n";
 
 export const FloatingNav = ({
   navItems,
@@ -21,9 +21,26 @@ export const FloatingNav = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
+  const { lang, setLang, t } = useTranslation();
 
   // set true for the initial state so that nav bar is visible in the hero section
   const [visible, setVisible] = useState(true);
+
+  const handleScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    link: string
+  ) => {
+    e.preventDefault();
+    const targetId = link.replace("#", "");
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     // Check if current is not undefined and is a number
@@ -72,34 +89,25 @@ export const FloatingNav = ({
         }}
       >
         {navItems.map((navItem: any, idx: number) => (
-          <Link
+          <a
             key={`link=${idx}`}
             href={navItem.link}
+            onClick={(e) => handleScrollToSection(e, navItem.link)}
             className={cn(
               "relative dark:text-neutral-50 items-center  flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
-            {/* add !cursor-pointer */}
-            {/* remove hidden sm:block for the mobile responsive */}
-            <span className=" text-sm !cursor-pointer">{navItem.name}</span>
-          </Link>
+            <span className=" text-sm !cursor-pointer">
+              {t(`nav.${navItem.name.toLowerCase()}`)}
+            </span>
+          </a>
         ))}
         {/* Language toggle */}
         <button
           onClick={() => {
-            try {
-              const current = localStorage.getItem("siteLang") || "fr";
-              const next = current === "en" ? "fr" : "en";
-              localStorage.setItem("siteLang", next);
-              if (typeof document !== "undefined") {
-                document.documentElement.lang = next;
-              }
-              // reload so components can pick up new language (or implement i18n later)
-              window.location.reload();
-            } catch (e) {
-              console.error(e);
-            }
+            const newLang = lang === "fr" ? "en" : "fr";
+            setLang(newLang);
           }}
           aria-label="Toggle site language"
           className={cn(
@@ -107,10 +115,7 @@ export const FloatingNav = ({
           )}
         >
           <span className="hidden sm:inline">
-            {typeof window !== "undefined" &&
-            (localStorage.getItem("siteLang") || "fr") === "en"
-              ? "EN"
-              : "FR"}
+            {lang === "en" ? "EN" : "FR"}
           </span>
           <span className="sm:hidden">Lang</span>
         </button>

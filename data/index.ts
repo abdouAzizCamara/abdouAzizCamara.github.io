@@ -1,12 +1,10 @@
 export const navItems = [
-  { name: "À propos", link: "#about" },
-  { name: "Projets", link: "#projects" },
-  { name: "Témoignages", link: "#testimonials" },
-  { name: "Contact", link: "#contact" },
+  { name: "about", link: "#about" },
+  { name: "projects", link: "#projects" },
+  { name: "contact", link: "#contact" },
 ];
 
 export const gridItems = [
-
   {
     id: 6,
     title: "Envie de lancer un projet ensemble ?",

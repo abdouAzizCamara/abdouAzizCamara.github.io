@@ -1,12 +1,16 @@
+"use client";
+
 import { FaLocationArrow } from "react-icons/fa6";
-import { FiGlobe } from "react-icons/fi";
+import { FiGlobe, FiDownload } from "react-icons/fi";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n";
 
 const Hero = () => {
+  const { t } = useTranslation();
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -50,33 +54,42 @@ const Hero = () => {
           </div>
 
           <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
-            Abdou Aziz Mbengue — Full‑Stack / Web Design / Mobile
+            {t("hero.subtitle")}
           </p>
 
           <div className="mt-3 flex items-center gap-3">
             <span className="inline-flex items-center gap-2 bg-white/6 dark:bg-white/4 text-xs text-neutral-900 dark:text-white rounded-full px-3 py-1">
               <FiGlobe className="text-sm" />
-              <span>English — C1 (Fluent)</span>
+              <span>{t("hero.language")}</span>
             </span>
           </div>
 
           <TextGenerateEffect
-            words="Je conçois et développe des expériences web et mobiles modernes"
+            words={t("hero.title")}
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
           />
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Salut ! Je suis Abdou Aziz Mbengue, Développeur Web Full‑Stack, Web
-            Designer et Développeur Mobile.
+            {t("hero.description")}
           </p>
 
-          <a href="#about">
-            <MagicButton
-              title="Voir mes projets"
-              icon={<FaLocationArrow />}
-              position="right"
-            />
-          </a>
+          <div className="flex flex-col md:flex-row gap-4 items-center">
+            <a href="#mes_projets">
+              <MagicButton
+                title={t("hero.cta")}
+                icon={<FaLocationArrow />}
+                position="right"
+              />
+            </a>
+
+            <a href="/cv.pdf" download="CV_Abdou_Aziz_Mbengue.pdf">
+              <MagicButton
+                title={t("hero.cta2")}
+                icon={<FiDownload />}
+                position="right"
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>

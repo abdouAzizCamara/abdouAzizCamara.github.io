@@ -17,12 +17,18 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
-        <MyServices />
-        <Languages />
-        <Technologies />
-        <Education />
-        <Projects />
-        <Footer />
+        <section id="about">
+          <MyServices />
+          <Languages />
+          <Technologies />
+          <Education />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Footer />
+        </section>
       </div>
     </main>
   );

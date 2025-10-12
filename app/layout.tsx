@@ -8,8 +8,8 @@ import ClientI18nProvider from "@/components/I18nProvider.client";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Adrian's Portfolio",
-  description: "Modern & Minimal JS Mastery Portfolio",
+  title: "Abdou aziz",
+  description: "Abdou aziz's personal website",
 };
 
 export default function RootLayout({

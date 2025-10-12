@@ -1,0 +1,88 @@
+{
+  "nav": {
+    "about": "My services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Abdou Aziz Mbengue — Full‑Stack / Web Design / Mobile",
+    "language": "English — C1 (Fluent)",
+    "title": "I design and develop modern web and mobile experiences",
+    "description": "Hi! I'm Abdou Aziz Mbengue, Full‑Stack Web Developer, Web Designer and Mobile Developer.",
+    "cta": "View my projects",
+    "cta2": "Download my CV"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "location": "Dakar, Senegal"
+  },
+  "services": {
+    "title": "My Services",
+    "subtitle": "I support projects from definition to delivery.",
+    "webDev": {
+      "title": "Web Development",
+      "description": "Design and development of high-performance, responsive and accessible web applications."
+    },
+    "mobile": {
+      "title": "Mobile Development",
+      "description": "Modern, fast and maintainable mobile applications for iOS and Android."
+    },
+    "uiux": {
+      "title": "UI/UX Design",
+      "description": "User-centered design: prototypes, mockups and design systems for intuitive and aesthetic interfaces."
+    },
+    "seo": {
+      "title": "SEO Optimization",
+      "description": "On-page & technical optimization to improve search engine visibility and increase organic traffic."
+    },
+    "graphic": {
+      "title": "Graphic Design",
+      "description": "Design of unique and adaptable logos — vector files, color variants and usage guidelines."
+    }
+  },
+  "languages": {
+    "title": "Languages & Tools",
+    "subtitle": "Here's an overview of the programming languages and tools I use daily to design, develop and maintain efficient and quality solutions.",
+    "fluent": "Fluent — Professional working proficiency"
+  },
+  "technologies": {
+    "title": "Frameworks & Libraries",
+    "subtitle": "Here's an overview of the programming languages and tools I use daily to design, develop and maintain efficient and quality solutions."
+  },
+  "education": {
+    "title": "Academic Background",
+    "subtitle": "Timeline of my studies",
+    "present": "Present",
+    "degrees": {
+      "master": "Master 2 Software Engineering",
+      "license": "Bachelor's Degree in Software Engineering and Information Systems",
+      "dst": "Higher Diploma in Computer Technology (DST) — Computer Science"
+    },
+    "institutions": {
+      "supdeco": "Supdeco",
+      "esp": "Polytechnic School of Dakar (ESP)"
+    }
+  },
+  "projects": {
+    "title": "My Most Recent Projects",
+    "subtitle": "Some recent projects.",
+    "items": {
+      "senelec": {
+        "title": "IPM Medical Coverage Management System (Internal Project – SENELEC)",
+        "description": "Development of a web application designed to automate the management of medical coverage requests for SENELEC employees and dependents. The system enables centralization of files, tracking of request status, validation by relevant departments, and generation of statistical reports."
+      },
+      "djimasou": {
+        "title": "DJIMASOU GLOBAL TRADING SERVICE",
+        "description": "Development of a website for Djimasou Global Trading Services, a company specializing in the sale of automotive spare parts and accessories. The site presents services, products, contacts, and gives a professional online image to the company."
+      },
+      "carim": {
+        "title": "CARIM Imaging — Radiology and Medical Imaging Center",
+        "description": "Development of a professional showcase website for CARIM Imaging, a medical center based in Grand Yoff (Dakar), specializing in radiology and medical imaging. The site presents the various examinations (MRI, CT scan, Ultrasound, ECG, etc.), practical information, and allows patients to contact the center directly."
+      },
+      "portfolio": {
+        "title": "Personal Portfolio",
+        "description": "Personal website built with Next.js and Tailwind to showcase my projects and skills."
+      }
+    }
+  }
+}

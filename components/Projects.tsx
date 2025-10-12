@@ -1,11 +1,12 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "@/lib/i18n";
 
 type Project = {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   tech: string[]; // paths to images
   link?: string | null;
@@ -14,10 +15,8 @@ type Project = {
 const projects: Project[] = [
   {
     id: 2,
-    title:
-      "Système de gestion des prises en charge IPM (Projet interne – SENELEC)",
-    description:
-      "Développement d’une application web destinée à automatiser la gestion des demandes de prise en charge médicale des employés et ayants droit de la SENELEC. Le système permet la centralisation des dossiers, le suivi du statut des demandes, la validation par les services concernés et la génération de rapports statistiques.",
+    titleKey: "projects.items.senelec.title",
+    descriptionKey: "projects.items.senelec.description",
     image: "/senelec.png",
     tech: [
       "/technologies/angular.svg",
@@ -30,9 +29,8 @@ const projects: Project[] = [
   },
   {
     id: 3,
-    title: "DJIMASOU GLOBAL TRADING SERVICE",
-    description:
-      "Réalisation d’un site web pour Djimasou Global Trading Services, une entreprise spécialisée dans la vente de pièces détachées et accessoires automobiles. Le site permet de présenter les services, les produits, les contacts, et de donner une image professionnelle à l’entreprise en ligne.",
+    titleKey: "projects.items.djimasou.title",
+    descriptionKey: "projects.items.djimasou.description",
     image: "/djimasou.png",
     tech: [
       "/technologies/wordpress.svg",
@@ -43,9 +41,8 @@ const projects: Project[] = [
   },
   {
     id: 4,
-    title: "CARIM Imagerie — Cabinet de Radiologie et d’Imagerie Médicale",
-    description:
-      "Développement d’un site vitrine professionnel pour CARIM Imagerie, un cabinet médical basé à Grand Yoff (Dakar), spécialisé dans la radiologie et l’imagerie médicale. Le site présente les différents examens (IRM, Scanner, Échographie, ECG, etc.), les informations pratiques, et permet aux patients de contacter directement le cabinet.",
+    titleKey: "projects.items.carim.title",
+    descriptionKey: "projects.items.carim.description",
     image: "/carim.png",
     tech: [
       "/technologies/wordpress.svg",
@@ -57,28 +54,29 @@ const projects: Project[] = [
   },
   {
     id: 1,
-    title: "Portfolio personnel",
-    description:
-      "Site personnel réalisé avec Next.js et Tailwind pour présenter mes projets et compétences.",
+    titleKey: "projects.items.portfolio.title",
+    descriptionKey: "projects.items.portfolio.description",
     image: "/portfolio.png",
     tech: [
       "/technologies/nextjs.svg",
       "/technologies/tailwind.svg",
       "/language_image/ts.svg",
     ],
-    link: "https://example.com/portfolio",
+    link: "https://github.com/AbdouAziz13/My-Portfolio",
   },
 ];
 
 export default function Projects() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-12 px-6 md:px-12">
       <div className="max-w-6xl mx-auto">
         <div className="mb-8 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Projets réalisés
+            {t("projects.title")}
           </h2>
-          <p className="text-sm text-neutral-500">Quelques projets récents.</p>
+          <p className="text-sm text-neutral-500">{t("projects.subtitle")}</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -92,21 +90,21 @@ export default function Projects() {
                     ? "hover:shadow-lg hover:-translate-y-1 transform cursor-pointer"
                     : ""
                 }`}
-                aria-label={p.title}
+                aria-label={t(p.titleKey)}
               >
                 <div className="w-full h-44 relative rounded-lg overflow-hidden mb-4">
                   <Image
                     src={p.image}
-                    alt={p.title}
+                    alt={t(p.titleKey)}
                     fill
                     sizes="(max-width: 640px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>
 
-                <h3 className="text-lg font-medium mb-2">{p.title}</h3>
+                <h3 className="text-lg font-medium mb-2">{t(p.titleKey)}</h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-300 mb-4">
-                  {p.description}
+                  {t(p.descriptionKey)}
                 </p>
 
                 <div className="flex flex-wrap gap-2">
@@ -132,7 +130,7 @@ export default function Projects() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block"
-                aria-label={`Ouvrir ${p.title} (nouvel onglet)`}
+                aria-label={`${t(p.titleKey)}`}
               >
                 {card}
               </a>

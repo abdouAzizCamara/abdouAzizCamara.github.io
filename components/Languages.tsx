@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import React from "react";
 import EnglishSkill from "./EnglishSkill";
+import { useTranslation } from "@/lib/i18n";
 
 type Language = {
   id: string;
@@ -9,7 +12,7 @@ type Language = {
 };
 
 const languages: Language[] = [
-  { id: "js", name: "JavaScript", img: "/language_image/ts.svg" },
+  { id: "js", name: "JavaScript", img: "/language_image/js.svg" },
   { id: "ts", name: "TypeScript", img: "/language_image/ts.svg" },
   { id: "java", name: "Java", img: "/language_image/java.svg" },
   { id: "html", name: "html", img: "/language_image/html.svg" },
@@ -22,20 +25,21 @@ const languages: Language[] = [
   { id: "figma", name: "figma", img: "/language_image/figma.svg" },
   { id: "jira", name: "jira", img: "/language_image/jira.svg" },
   { id: "trello", name: "trello", img: "/language_image/trello.svg" },
+  { id: "Postgresql", name: "Postgresql", img: "/language_image/pgsql.svg" },
 ];
 
 export default function Languages() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-2">
-            Languages & outils
+            {t("languages.title")}
           </h2>
           <p className="text-sm md:text-base text-muted-foreground">
-            Voici un aperçu des langages de programmation et des outils que
-            j’utilise au quotidien pour concevoir, développer et maintenir des
-            solutions efficaces et de qualité.
+            {t("languages.subtitle")}
           </p>
         </div>
 
@@ -66,7 +70,7 @@ export default function Languages() {
                       <div className="h-2 bg-white rounded-full w-[85%]" />
                     </div>
                     <p className="text-xs text-white/90 mt-1 text-center">
-                      Fluent — Professional working proficiency
+                      {t("languages.fluent")}
                     </p>
                   </div>
                 </div>

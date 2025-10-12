@@ -1,12 +1,13 @@
 "use client";
 import React from "react";
 import { FaGraduationCap } from "react-icons/fa6";
+import { useTranslation } from "@/lib/i18n";
 
 type EducationItem = {
   id: number;
-  period: string;
-  degree: string;
-  institution: string;
+  periodKey: string;
+  degreeKey: string;
+  institutionKey: string;
   description?: string;
 };
 
@@ -15,37 +16,39 @@ type EducationItem = {
 // - Actuellement : Master 2 Génie Logiciel à Supdeco (indiqué comme "Présent")
 // Si tu veux des années exactes différentes, dis-le moi et j'ajuste.
 
-const education: EducationItem[] = [
+const getEducation = (t: any): EducationItem[] => [
   {
     id: 0,
-    period: "2023 — Présent",
-    degree: "Master 2 Génie Logiciel",
-    institution: "Supdeco",
+    periodKey: "2023 — " + t("education.present"),
+    degreeKey: "education.degrees.master",
+    institutionKey: "education.institutions.supdeco",
   },
   {
     id: 1,
-    period: "2022 — 2023",
-    degree: "Licence en Génie Logiciel et Systèmes d'Information",
-    institution: "École Supérieure Polytechnique de Dakar (ESP)",
+    periodKey: "2022 — 2023",
+    degreeKey: "education.degrees.license",
+    institutionKey: "education.institutions.esp",
   },
   {
     id: 2,
-    period: "2020 — 2022",
-    degree:
-      "Diplôme Supérieur de Technologie en Informatique (DST) — Informatique",
-    institution: "École Supérieure Polytechnique de Dakar (ESP)",
+    periodKey: "2020 — 2022",
+    degreeKey: "education.degrees.dst",
+    institutionKey: "education.institutions.esp",
   },
 ];
 
 export default function Education() {
+  const { t } = useTranslation();
+  const education = getEducation(t);
+
   return (
     <section className="py-12 px-6 md:px-12">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8 text-center">
           <h2 className="text-2xl md:text-3xl font-semibold">
-            Parcours académique
+            {t("education.title")}
           </h2>
-          <p className="text-sm text-neutral-500">Timeline de mes études</p>
+          <p className="text-sm text-neutral-500">{t("education.subtitle")}</p>
         </div>
 
         <div className="relative">
@@ -61,13 +64,15 @@ export default function Education() {
 
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                   <div>
-                    <h3 className="text-md font-medium">{e.degree}</h3>
+                    <h3 className="text-md font-medium">{t(e.degreeKey)}</h3>
                     <p className="text-sm text-neutral-600 dark:text-neutral-300">
-                      {e.institution}
+                      {t(e.institutionKey)}
                     </p>
                   </div>
 
-                  <time className="text-sm text-neutral-500">{e.period}</time>
+                  <time className="text-sm text-neutral-500">
+                    {e.periodKey}
+                  </time>
                 </div>
               </li>
             ))}

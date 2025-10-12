@@ -1,6 +1,9 @@
+"use client";
+
 import { Molengo } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+import { useTranslation } from "@/lib/i18n";
 
 type Technologies = {
   id: string;
@@ -46,37 +49,37 @@ const technologies: Technologies[] = [
     img: "/technologies/tailwind.svg",
   },
   //mongo
-    {
+  {
     id: "mongo",
     name: "MongoDB",
     img: "/technologies/mongo.svg",
-    },
-    // mysql
-    {
+  },
+  // mysql
+  {
     id: "mysql",
     name: "MySQL",
     img: "/technologies/mysql.svg",
-    },
-    //wordpress
-    {
+  },
+  //wordpress
+  {
     id: "wordpress",
     name: "WordPress",
     img: "/technologies/wordpress.svg",
-    },
+  },
 ];
 
 export default function Technologies() {
+  const { t } = useTranslation();
+
   return (
     <section className="w-full">
       <div className="max-w-6xl mx-auto px-6 py-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-2">
-            Framework et Bibliothèques
+            {t("technologies.title")}
           </h2>
           <p className="text-sm md:text-base text-muted-foreground">
-            Voici un aperçu des langages de programmation et des outils que
-            j’utilise au quotidien pour concevoir, développer et maintenir des
-            solutions efficaces et de qualité.
+            {t("technologies.subtitle")}
           </p>
         </div>
 

@@ -3,12 +3,12 @@ import Image from "next/image";
 import { FaLaptopCode, FaPalette, FaPenNib } from "react-icons/fa6";
 import { FiPhone, FiSearch } from "react-icons/fi";
 import { CiMobile3 } from "react-icons/ci";
-
+import { useTranslation } from "@/lib/i18n";
 
 type Service = {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   image: string;
   Icon: any;
 };
@@ -16,57 +16,53 @@ type Service = {
 const services: Service[] = [
   {
     id: 1,
-    title: "Développement web",
-    description:
-      "Conception et développement d'applications web performantes, responsives et accessibles (Next.js, React, Tailwind).",
+    titleKey: "services.webDev.title",
+    descriptionKey: "services.webDev.description",
     image: "/developpement.png",
     Icon: FaLaptopCode,
   },
   {
     id: 2,
-    title: "Développement mobile",
-    description:
-      "Applications mobiles modernes, rapides et maintainables pour iOS et Android ( Flutter selon besoin).",
+    titleKey: "services.mobile.title",
+    descriptionKey: "services.mobile.description",
     image: "/mobile.png",
     Icon: CiMobile3,
   },
   {
     id: 3,
-    title: "Design UI/UX",
-    description:
-      "Design centré utilisateur : prototypes, maquettes et systèmes de design pour des interfaces intuitives et esthétiques.",
+    titleKey: "services.uiux.title",
+    descriptionKey: "services.uiux.description",
     image: "/ui.png",
     Icon: FaPalette,
   },
   {
     id: 4,
-    title: "Référencement (SEO)",
-    description:
-      "Optimisation on-page & technique pour améliorer la visibilité dans les moteurs de recherche et augmenter le trafic organique.",
+    titleKey: "services.seo.title",
+    descriptionKey: "services.seo.description",
     image: "/seo.png",
     Icon: FiSearch,
   },
   {
     id: 5,
-    title: "Design graphique",
-    description:
-      "Conception de logos uniques et adaptables — files vectorielles, variantes couleurs et guide d'utilisation.",
+    titleKey: "services.graphic.title",
+    descriptionKey: "services.graphic.description",
     image: "/designGraphique.png",
     Icon: FaPenNib,
   },
 ];
 
 export default function MyServices() {
+  const { t } = useTranslation();
+
   return (
     <section className="py-16 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-semibold mb-2">
-            Mes services
+            {t("services.title")}
           </h2>
           <p className="text-sm md:text-base text-muted-foreground">
-            J&apos;accompagne les projets depuis la définition jusqu&apos;à la
-            livraison.
+            {t("services.subtitle")}
           </p>
         </div>
 
@@ -82,9 +78,9 @@ export default function MyServices() {
                 </div>
 
                 <div className="flex-1">
-                  <h3 className="text-lg font-medium mb-1">{s.title}</h3>
+                  <h3 className="text-lg font-medium mb-1">{t(s.titleKey)}</h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-300">
-                    {s.description}
+                    {t(s.descriptionKey)}
                   </p>
                 </div>
               </div>
@@ -93,7 +89,7 @@ export default function MyServices() {
                 <div className="w-28 h-20 relative rounded-lg overflow-hidden">
                   <Image
                     src={s.image}
-                    alt={s.title}
+                    alt={t(s.titleKey)}
                     fill
                     sizes="(max-width: 768px) 120px, 140px"
                     className="object-contain"

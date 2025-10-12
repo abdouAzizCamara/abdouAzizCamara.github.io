@@ -1,0 +1,89 @@
+{
+  "nav": {
+    "about": "Mes services",
+    "projects": "Projets",
+    "testimonials": "Témoignages",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "Abdou Aziz Mbengue — Full‑Stack / Web Design / Mobile",
+    "language": "English — C1 (Fluent)",
+    "title": "Je conçois et développe des expériences web et mobiles modernes",
+    "description": "Salut ! Je suis Abdou Aziz Mbengue, Développeur Web Full‑Stack, Web Designer et Développeur Mobile.",
+    "cta": "Voir mes projets",
+    "cta2": "Télécharger mon CV"
+  },
+  "footer": {
+    "rights": "Tous droits réservés",
+    "location": "Dakar, Sénégal"
+  },
+  "services": {
+    "title": "Mes services",
+    "subtitle": "J'accompagne les projets depuis la définition jusqu'à la livraison.",
+    "webDev": {
+      "title": "Développement web",
+      "description": "Conception et développement d'applications web performantes, responsives et accessibles."
+    },
+    "mobile": {
+      "title": "Développement mobile",
+      "description": "Applications mobiles modernes, rapides et maintainables pour iOS et Android."
+    },
+    "uiux": {
+      "title": "Design UI/UX",
+      "description": "Design centré utilisateur : prototypes, maquettes et systèmes de design pour des interfaces intuitives et esthétiques."
+    },
+    "seo": {
+      "title": "Référencement (SEO)",
+      "description": "Optimisation on-page & technique pour améliorer la visibilité dans les moteurs de recherche et augmenter le trafic organique."
+    },
+    "graphic": {
+      "title": "Design graphique",
+      "description": "Conception de logos uniques et adaptables — files vectorielles, variantes couleurs et guide d'utilisation."
+    }
+  },
+  "languages": {
+    "title": "Languages & outils",
+    "subtitle": "Voici un aperçu des langages de programmation et des outils que j'utilise au quotidien pour concevoir, développer et maintenir des solutions efficaces et de qualité.",
+    "fluent": "Fluent — Professional working proficiency"
+  },
+  "technologies": {
+    "title": "Framework et Bibliothèques",
+    "subtitle": "Voici un aperçu des langages de programmation et des outils que j'utilise au quotidien pour concevoir, développer et maintenir des solutions efficaces et de qualité."
+  },
+  "education": {
+    "title": "Parcours académique",
+    "subtitle": "Timeline de mes études",
+    "present": "Présent",
+    "degrees": {
+      "master": "Master 2 Génie Logiciel",
+      "license": "Licence en Génie Logiciel et Systèmes d'Information",
+      "dst": "Diplôme Supérieur de Technologie en Informatique (DST) — Informatique"
+    },
+    "institutions": {
+      "supdeco": "Supdeco",
+      "esp": "École Supérieure Polytechnique de Dakar (ESP)"
+    }
+  },
+  "projects": {
+    "title": "Les projets les plus récents que j'ai réalisés",
+    "subtitle": "Quelques projets récents.",
+    "items": {
+      "senelec": {
+        "title": "Système de gestion des prises en charge IPM (Projet interne – SENELEC)",
+        "description": "Développement d'une application web destinée à automatiser la gestion des demandes de prise en charge médicale des employés et ayants droit de la SENELEC. Le système permet la centralisation des dossiers, le suivi du statut des demandes, la validation par les services concernés et la génération de rapports statistiques."
+      },
+      "djimasou": {
+        "title": "DJIMASOU GLOBAL TRADING SERVICE",
+        "description": "Réalisation d'un site web pour Djimasou Global Trading Services, une entreprise spécialisée dans la vente de pièces détachées et accessoires automobiles. Le site permet de présenter les services, les produits, les contacts, et de donner une image professionnelle à l'entreprise en ligne."
+      },
+      "carim": {
+        "title": "CARIM Imagerie — Cabinet de Radiologie et d'Imagerie Médicale",
+        "description": "Développement d'un site vitrine professionnel pour CARIM Imagerie, un cabinet médical basé à Grand Yoff (Dakar), spécialisé dans la radiologie et l'imagerie médicale. Le site présente les différents examens (IRM, Scanner, Échographie, ECG, etc.), les informations pratiques, et permet aux patients de contacter directement le cabinet."
+      },
+      "portfolio": {
+        "title": "Portfolio personnel",
+        "description": "Site personnel réalisé avec Next.js et Tailwind pour présenter mes projets et compétences."
+      }
+    }
+  }
+}
