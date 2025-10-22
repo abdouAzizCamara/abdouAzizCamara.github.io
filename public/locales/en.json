@@ -1,13 +1,14 @@
 {
   "nav": {
     "about": "My services",
+    "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "Abdou Aziz Mbengue — Full‑Stack / Web Design / Mobile",
+    "subtitle": " Full‑Stack Web Developer / UI/UX Designer / Mobile Developer",
     "language": "English — C1 (Fluent)",
-    "title": "I design and develop modern web and mobile experiences",
+    "title": "Welcome! 👋🏽",
     "description": "Hi! I'm Abdou Aziz Mbengue, Full‑Stack Web Developer, Web Designer and Mobile Developer.",
     "cta": "View my projects",
     "cta2": "Download my CV"
@@ -15,6 +16,27 @@
   "footer": {
     "rights": "All rights reserved",
     "location": "Dakar, Senegal"
+  },
+  "contact": {
+    "title": "Let's Stay in Touch",
+    "subtitle": "Have a question? A project? Feel free to contact me, I'd be happy to chat with you!",
+    "formTitle": "Send me a message",
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Your name",
+      "email": "Email Address",
+      "emailPlaceholder": "your.email@example.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "Subject of your message",
+      "message": "Message",
+      "messagePlaceholder": "Write your message here...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Message sent!"
+    }
   },
   "services": {
     "title": "My Services",
@@ -42,8 +64,23 @@
   },
   "languages": {
     "title": "Languages & Tools",
-    "subtitle": "Here's an overview of the programming languages and tools I use daily to design, develop and maintain efficient and quality solutions.",
-    "fluent": "Fluent — Professional working proficiency"
+    "subtitle": "Here's an overview of the programming languages and tools I use daily to design, develop and maintain efficient and quality solutions."
+  },
+  "linguisticSkills": {
+    "title": "Linguistic Skills",
+    "subtitle": "My language proficiency for effective international professional communication",
+    "english": {
+      "name": "English",
+      "proficiency": "Fluent — Professional working proficiency",
+      "levelLabel": "Level",
+      "progressLabel": "Overall proficiency",
+      "skills": {
+        "reading": "Reading",
+        "writing": "Writing",
+        "speaking": "Speaking",
+        "listening": "Listening"
+      }
+    }
   },
   "technologies": {
     "title": "Frameworks & Libraries",
@@ -82,6 +119,52 @@
       "portfolio": {
         "title": "Personal Portfolio",
         "description": "Personal website built with Next.js and Tailwind to showcase my projects and skills."
+      }
+    }
+  },
+  "experience": {
+    "title": "Professional Experience",
+    "subtitle": "My internships and jobs",
+    "locale": "en-US",
+    "viewDetails": "View details",
+    "modal": {
+      "description": "Description",
+      "tasks": "Key responsibilities",
+      "technologies": "Technologies used"
+    },
+    "items": {
+      "senelec": {
+        "company": "SENELEC",
+        "role": "Full-Stack Developer",
+        "description": "Development of a web application designed to automate the management of medical coverage requests for SENELEC employees and dependents. The system enables centralization of files, tracking of request status, validation by relevant departments, and generation of statistical reports.",
+        "tasks": [
+          "Design and development of a full-stack web application (Angular + Spring Boot)",
+          "Implementation of RESTful architecture for front-end/back-end communication",
+          "Implementation of user management and access rights",
+          "Development of statistical dashboards and dynamic reports"
+        ]
+      },
+      "senelec2": {
+        "company": "SENELEC",
+        "role": "Full-Stack Web Developer (Internship)",
+        "description": "Participated in the development of a web application for real-time data entry, monitoring, and centralization of electrical production data (Instantaneous Power and Hourly Uni Index) from power plants. The system allows automatic calculation of hourly energy, performance visualization by plant and at the Interconnected Network (RI) level, as well as daily data entry and control by statistical agents.",
+        "tasks": [
+          "Design and development of a collaborative web application for energy data collection and monitoring",
+          "Implementation of real-time data synchronization and validation mechanisms",
+          "Development of performance visualization tools and reporting features",
+          "Collaboration with cross-functional teams to ensure data accuracy and system reliability"
+        ]
+      },
+      "gs7s": {
+        "company": "GS7S (Global System 7 Solutions ) ",
+        "role": "Full Stack Web Developer / UI-UX Designer (Internship)",
+        "description": "Participated in the complete redesign of the GS7S company website to improve performance, ergonomics, and maintainability. The project involved designing a modern architecture based on React for the frontend and Node.js for the backend, while ensuring database management and optimization. This redesign also aimed to enhance code quality and compliance with best practices through the integration of SonarQube.",
+        "tasks": [
+          "Redesign of the company website using React (frontend) and Node.js (backend)",
+          "Implementation of responsive design principles for optimal user experience across devices",
+          "Database management and optimization for improved performance",
+          "Integration of SonarQube for code quality assurance and best practices compliance"
+        ]
       }
     }
   }

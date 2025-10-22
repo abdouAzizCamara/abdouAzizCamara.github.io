@@ -11,6 +11,22 @@ import { useTranslation } from "@/lib/i18n";
 
 const Hero = () => {
   const { t } = useTranslation();
+
+  const handleScrollToSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    e.preventDefault();
+    const targetElement = document.getElementById(sectionId);
+
+    if (targetElement) {
+      targetElement.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  };
+
   return (
     <div className="pb-20 pt-36">
       {/**
@@ -52,29 +68,27 @@ const Hero = () => {
               className="object-cover w-full h-full"
             />
           </div>
+          <h1 className="text-xl xl:text-2xl my-2  font-bold text-blue-600">
+            Abdou Aziz Mbengue
+          </h1>
 
-          <p className="uppercase tracking-widest text-xs text-center text-blue-100 max-w-80">
+          <p className="  border p-3 rounded-md border-blue-400 tracking-widest text-xl font-bold text-center text-blue-100 ">
             {t("hero.subtitle")}
           </p>
 
-          <div className="mt-3 flex items-center gap-3">
-            <span className="inline-flex items-center gap-2 bg-white/6 dark:bg-white/4 text-xs text-neutral-900 dark:text-white rounded-full px-3 py-1">
-              <FiGlobe className="text-sm" />
-              <span>{t("hero.language")}</span>
-            </span>
-          </div>
-
-          <TextGenerateEffect
-            words={t("hero.title")}
-            className="text-center text-[40px] md:text-5xl lg:text-6xl"
-          />
+          <h2 className="text-center text-[40px] text-blue-700 font-serif font-bold lg:my-4 md:text-5xl lg:text-6xl">
+            {t("hero.title")}
+          </h2>
 
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             {t("hero.description")}
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 items-center">
-            <a href="#mes_projets">
+            <a
+              href="#projects"
+              onClick={(e) => handleScrollToSection(e, "projects")}
+            >
               <MagicButton
                 title={t("hero.cta")}
                 icon={<FaLocationArrow />}

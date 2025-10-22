@@ -1,14 +1,15 @@
 {
   "nav": {
     "about": "Mes services",
+    "experience": "Expériences",
     "projects": "Projets",
     "testimonials": "Témoignages",
     "contact": "Contact"
   },
   "hero": {
-    "subtitle": "Abdou Aziz Mbengue — Full‑Stack / Web Design / Mobile",
+    "subtitle": "Développeur Web Full‑Stack / Design Ui/Ux / Développeur Mobile",
     "language": "English — C1 (Fluent)",
-    "title": "Je conçois et développe des expériences web et mobiles modernes",
+    "title": "Bonjour ! 👋🏽",
     "description": "Salut ! Je suis Abdou Aziz Mbengue, Développeur Web Full‑Stack, Web Designer et Développeur Mobile.",
     "cta": "Voir mes projets",
     "cta2": "Télécharger mon CV"
@@ -16,6 +17,27 @@
   "footer": {
     "rights": "Tous droits réservés",
     "location": "Dakar, Sénégal"
+  },
+  "contact": {
+    "title": "Restons en contact",
+    "subtitle": "Une question ? Un projet ? N'hésitez pas à me contacter, je serais ravi d'échanger avec vous !",
+    "formTitle": "Envoyez-moi un message",
+    "email": "Email",
+    "phone": "Téléphone",
+    "location": "Localisation",
+    "form": {
+      "name": "Nom complet",
+      "namePlaceholder": "Votre nom",
+      "email": "Adresse email",
+      "emailPlaceholder": "votre.email@example.com",
+      "subject": "Sujet",
+      "subjectPlaceholder": "Le sujet de votre message",
+      "message": "Message",
+      "messagePlaceholder": "Écrivez votre message ici...",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé !"
+    }
   },
   "services": {
     "title": "Mes services",
@@ -43,8 +65,23 @@
   },
   "languages": {
     "title": "Languages & outils",
-    "subtitle": "Voici un aperçu des langages de programmation et des outils que j'utilise au quotidien pour concevoir, développer et maintenir des solutions efficaces et de qualité.",
-    "fluent": "Fluent — Professional working proficiency"
+    "subtitle": "Voici un aperçu des langages de programmation et des outils que j'utilise au quotidien pour concevoir, développer et maintenir des solutions efficaces et de qualité."
+  },
+  "linguisticSkills": {
+    "title": "Compétences Linguistiques",
+    "subtitle": "Ma maîtrise des langues pour une communication professionnelle internationale",
+    "english": {
+      "name": "Anglais",
+      "proficiency": "Courant — Niveau professionnel",
+      "levelLabel": "Niveau",
+      "progressLabel": "Maîtrise globale",
+      "skills": {
+        "reading": "Lecture",
+        "writing": "Écriture",
+        "speaking": "Expression orale",
+        "listening": "Compréhension orale"
+      }
+    }
   },
   "technologies": {
     "title": "Framework et Bibliothèques",
@@ -83,6 +120,53 @@
       "portfolio": {
         "title": "Portfolio personnel",
         "description": "Site personnel réalisé avec Next.js et Tailwind pour présenter mes projets et compétences."
+      }
+    }
+  },
+  "experience": {
+    "title": "Expériences Professionnelles",
+    "subtitle": "Mes stages et emplois",
+    "locale": "fr-FR",
+    "viewDetails": "Voir les détails",
+    "modal": {
+      "description": "Description",
+      "tasks": "Missions réalisées",
+      "technologies": "Technologies utilisées"
+    },
+    "items": {
+      "senelec": {
+        "company": "SENELEC",
+        "role": "Développeur Web Full-Stack Designer UI-Ux (stage)  ",
+        "description": "Développement d'une application web destinée à automatiser la gestion des demandes de prise en charge médicale des employés et ayants droit de la SENELEC. Le système permet la centralisation des dossiers, le suivi du statut des demandes, la validation par les services concernés et la génération de rapports statistiques.",
+        "tasks": [
+          "Conception et développement d'une application web full-stack (Angular + Fast Api)",
+          "Mise en place d'une architecture RESTful pour la communication front-end/back-end",
+          "Implémentation de la gestion des utilisateurs et des droits d'accès",
+          "Développement de tableaux de bord statistiques et de rapports dynamiques"
+        ]
+      },
+      "senelec2": {
+        "company": "SENELEC",
+        "role": "Développeur Web Full-Stack (stage)",
+        "description": "Participation au développement d'une application web destinée à la saisie, au suivi et à la centralisation en temps réel des données de production électrique (Puissances Instantanées et Index Uni Horaires) des centrales. Le système permet le calcul automatique de l’énergie horaire, la visualisation des performances par centrale et au niveau du Réseau Interconnecté (RI), ainsi que la saisie et le contrôle des données journalières par les agents statistiques.",
+        "tasks": [
+          "Conception et développement d’une application web collaborative pour la collecte et le suivi des données énergétiques",
+          "Développement de tableaux de bord dynamiques pour le suivi en temps réel des puissances et pointes par centrale",
+          "Intégration d’un module de saisie et de validation des données journalières pour les agents statistiques",
+          "Participation à la refonte et à la modernisation du Système d’Information de Production (SIP)"
+        ]
+      },
+      "gs7s": {
+        "company": "GS7S (Global System 7 Solutions ) ",
+        "role": "Développeur Web Full Stack / UI-UX Design (stage)",
+        "description": "Participation à la refonte complète du site web de l’entreprise GS7S afin d’améliorer les performances, l’ergonomie et la maintenabilité du site web. Le projet a consisté à concevoir une architecture moderne basée sur React pour le frontend et Node.js pour le backend, tout en assurant la gestion et l’optimisation des bases de données. Cette refonte visait également à renforcer la qualité du code et la conformité aux bonnes pratiques grâce à l’intégration de SonarQube.",
+        "tasks": [
+          "Refonte du site web de l’entreprise avec React (frontend) et Node.js (backend)",
+          "Conception et modélisation des bases de données sous MongoDB",
+          "Création des maquettes et prototypes d’interface avec Figma avant le développement",
+          "Amélioration de la qualité du code et mise en place d’une analyse continue avec SonarQube",
+          "Optimisation de la performance et de l’expérience utilisateur du site"
+        ]
       }
     }
   }

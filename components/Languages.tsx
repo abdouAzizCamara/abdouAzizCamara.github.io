@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import React from "react";
-import EnglishSkill from "./EnglishSkill";
 import { useTranslation } from "@/lib/i18n";
 
 type Language = {
@@ -43,55 +42,26 @@ export default function Languages() {
           </p>
         </div>
 
-        {/* Featured English skill (separate component) */}
-        <EnglishSkill />
-
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
           {languages.map((lang) => (
-            <div key={lang.id}>
-              {lang.id === "en" ? (
-                <div className="flex flex-col items-center gap-3 bg-gradient-to-r from-indigo-500 to-cyan-400 text-white rounded-xl p-4 shadow-lg">
-                  <div className="relative w-16 h-16">
-                    <Image
-                      src={lang.img}
-                      alt={lang.name}
-                      sizes="64px"
-                      fill={false}
-                      width={64}
-                      height={64}
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm font-semibold text-center">
-                    {lang.name} — C1
-                  </span>
-                  <div className="w-full mt-2">
-                    <div className="h-2 bg-white/30 rounded-full overflow-hidden">
-                      <div className="h-2 bg-white rounded-full w-[85%]" />
-                    </div>
-                    <p className="text-xs text-white/90 mt-1 text-center">
-                      {t("languages.fluent")}
-                    </p>
-                  </div>
-                </div>
-              ) : (
-                <div className="flex flex-col items-center gap-3 bg-white/5 dark:bg-white/3 rounded-xl p-4 hover:scale-105 transform transition-shadow duration-200 shadow-sm">
-                  <div className="relative w-16 h-16">
-                    <Image
-                      src={lang.img}
-                      alt={lang.name}
-                      sizes="64px"
-                      fill={false}
-                      width={64}
-                      height={64}
-                      className="object-contain"
-                    />
-                  </div>
-                  <span className="text-sm font-medium text-center">
-                    {lang.name}
-                  </span>
-                </div>
-              )}
+            <div
+              key={lang.id}
+              className="flex flex-col items-center gap-3 bg-white/5 dark:bg-white/3 rounded-xl p-4 hover:scale-105 transform transition-shadow duration-200 shadow-sm"
+            >
+              <div className="relative w-16 h-16">
+                <Image
+                  src={lang.img}
+                  alt={lang.name}
+                  sizes="64px"
+                  fill={false}
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
+              </div>
+              <span className="text-sm font-medium text-center">
+                {lang.name}
+              </span>
             </div>
           ))}
         </div>
