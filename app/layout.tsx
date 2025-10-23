@@ -8,8 +8,26 @@ import ClientI18nProvider from "@/components/I18nProvider.client";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abdou aziz",
-  description: "Abdou aziz's personal website",
+  title: "Abdou Aziz | Portfolio",
+  description:
+    "Portfolio personnel d'Abdou Aziz Camara - Développeur Full Stack",
+
+  // Configuration des icônes (favicons)
+  icons: {
+    icon: [
+      { url: "/favicon.png", type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+  },
+
+  // Couleur de thème pour les navigateurs mobiles
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#ffffff" },
+    { media: "(prefers-color-scheme: dark)", color: "#0f172a" },
+  ],
+
+  // Manifest pour PWA
+  manifest: "/site.webmanifest",
 };
 
 export default function RootLayout({
@@ -19,9 +37,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr" suppressHydrationWarning>
-      <head>
-        <link rel="icon" href="/jsm-logo.png" sizes="any" />
-      </head>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
