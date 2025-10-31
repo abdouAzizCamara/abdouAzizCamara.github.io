@@ -2,15 +2,18 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 import { FiGlobe, FiDownload } from "react-icons/fi";
+import { useState } from "react";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
 import { TextGenerateEffect } from "./ui/TextGenerateEffect";
 import Image from "next/image";
 import { useTranslation } from "@/lib/i18n";
+import CVDownloadModal from "./ui/CVDownloadModal";
 
 const Hero = () => {
   const { t } = useTranslation();
+  const [isCVModalOpen, setIsCVModalOpen] = useState(false);
 
   const handleScrollToSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
@@ -96,16 +99,22 @@ const Hero = () => {
               />
             </a>
 
-            <a href="/cv.pdf" download="CV_Abdou_Aziz_Mbengue.pdf">
+            <button onClick={() => setIsCVModalOpen(true)}>
               <MagicButton
                 title={t("hero.cta2")}
                 icon={<FiDownload />}
                 position="right"
               />
-            </a>
+            </button>
           </div>
         </div>
       </div>
+
+      {/* Modal de téléchargement du CV */}
+      <CVDownloadModal
+        isOpen={isCVModalOpen}
+        onClose={() => setIsCVModalOpen(false)}
+      />
     </div>
   );
 };

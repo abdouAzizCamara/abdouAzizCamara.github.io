@@ -13,6 +13,13 @@
     "cta": "View my projects",
     "cta2": "Download my CV"
   },
+  "cvModal": {
+    "title": "Download my CV",
+    "subtitle": "Choose your preferred version",
+    "frenchVersion": "French Version",
+    "englishVersion": "English Version",
+    "footer": "Download will start automatically"
+  },
   "footer": {
     "rights": "All rights reserved",
     "location": "Dakar, Senegal"
