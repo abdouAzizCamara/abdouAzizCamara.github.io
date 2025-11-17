@@ -25,14 +25,15 @@ const Home = () => {
           <LinguisticSkills />
           <Languages />
           <Technologies />
-          <Education />
-        </section>
-        <section id="experience">
-          <Experience />
         </section>
         <section id="projects">
           <Projects />
         </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <Education />
+
         <section id="contact">
           <Contact />
           <Footer />

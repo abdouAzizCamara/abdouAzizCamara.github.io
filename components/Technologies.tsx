@@ -30,6 +30,12 @@ const technologies: Technologies[] = [
     name: "Node.js",
     img: "/technologies/nodejs.svg",
   },
+  {
+    //node js
+    id: "nest js",
+    name: "NestJS",
+    img: "/technologies/nestjs.svg",
+  },
   //angular
   {
     id: "angular",
